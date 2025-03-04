@@ -13,9 +13,39 @@
             background-repeat: no-repeat;
           
         }
+
+        .container{
+            height: 650px;
+            width: 800px;
+            
+            display: block;
+            margin:  250px auto;
+        }
+
+        .heading{
+            font-size: 60px;
+            text-align: center;
+        }
+
+        .input{
+            height: 50px;
+         
+            font-size: 25px ;
+        }
+        .sub{
+            display: flex;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
-    
+    <div class="container">
+        <p class="heading">Indian States</br> and its</br> Capital</p>
+      <div class="sub">
+        <input type="text" placeholder="Enter State" class="input">
+        <h1 id="capital"></h1>
+    </div>
+
+    </div>
 </body>
 </html>
