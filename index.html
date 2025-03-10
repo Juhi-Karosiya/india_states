@@ -11,13 +11,13 @@
             background: url(./img/bg-Photoroom.png);
             background-size: cover;
             background-repeat: no-repeat;
+        
           
         }
 
         .container{
             height: 650px;
             width: 800px;
-            
             display: block;
             margin:  250px auto;
         }
@@ -35,6 +35,17 @@
         .sub{
             display: flex;
             justify-content: center;
+        }
+
+        #enter{
+            border: none;
+            background-color: rgb(141, 191, 252);
+            width: 80px;
+            color: white;
+        }
+
+        #capital{
+            text-align: center;
         }
 
         @media screen and (max-width:450px) {
@@ -55,10 +66,59 @@
     <div class="container">
         <p class="heading">Indian States</br> and its</br> Capital</p>
       <div class="sub">
-        <input type="text" placeholder="Enter State" class="input">
+        <input type="text" placeholder="Enter State" id="state" class="input">
+        <button id="enter" onclick="convert()">Enter</button></div></br>
+
         <h1 id="capital"></h1>
+    
     </div>
 
     </div>
+
+    <script>
+
+        const stateCapital = {
+            "andhra pradesh": "Amaravati",
+            "arunachal pradesh": "Itanagar",
+            assam : "Dispur",
+            bihar : "Patna",
+            chhattisgarh : "Raipur",
+            goa : "Panaji",
+            gujarat : "Gandhinagar",
+            haryana : "Chandigarh",
+            "himachal pradesh": "Shimla",
+            jharkhand : "Ranchi",
+            karnataka : "Bengaluru",
+            kerala : "Thiruvananthapuram",
+            "madhya pradesh": "Bhopal",
+            maharashtra : "Mumbai",
+            manipur : "Imphal",
+            meghalaya : "Shillong",
+            mizoram : "Aizawl",
+            nagaland : "Kohima",
+            odisha : "Bhubaneswar",
+            punjab : "Chandigarh",
+            rajasthan : "Jaipur",
+            sikkim : "Gangtok",
+            "tamil nadu": "Chennai",
+            telangana : "Hyderabad",
+            tripura : "Agartala",
+            "uttar pradesh": "Lucknow",
+            uttarakhand : "Dehradun",
+            "west bengal": "Kolkata"
+
+        };
+
+
+        function convert(){
+            const stateName = document.getElementById("state");
+            const capitalName = document.getElementById("capital");
+
+            const state = stateName.value.toLowerCase();
+            const capital = stateCapital[state];
+            capitalName.innerText = `Capital: ${capital}`;
+
+        }
+    </script>
 </body>
 </html>
